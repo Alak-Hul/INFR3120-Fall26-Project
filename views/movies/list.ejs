@@ -4,26 +4,34 @@
     <div class="row">
         <div class="offset-md-1 col-md-10">
             <h1><%= title %></h1>
+            <form method="GET">
+                <input type="text" name="searchQuery" placeholder="Search movies by title...">
+                <button type="submit">Search</button>
+            </form>
             <br>
-            <table class="table table-bordered table-striped table-hover">
-                <!--Header Row-->
-                <tr>
-                    <th class="text-center col-2">Title</th>
-                    <th class="text-center col-2">Director</th>
-                    <th class="text-center col-1">Release Year</th>
-                    <th class="col-4">Description</th>
-                </tr>
-                <!--Columns-->
-                <% console.log(MovieList); %>
-                <% for(let count=0;count<MovieList.length;count++) { %>
+            <% if (MovieList.length > 0)  { %>
+                <table class="table table-bordered table-striped table-hover">
+                    <!--Header Row-->
                     <tr>
-                        <td class="text-center col-2"><%= MovieList[count].title %></td>
-                        <td class="text-center col-2"><%= MovieList[count].director %></td>
-                        <td class="text-center col-1"><%= MovieList[count].releaseYear %></td>
-                        <td class="col-4"><%= MovieList[count].description %></td>
+                        <th class="text-center col-2">Title</th>
+                        <th class="text-center col-2">Director</th>
+                        <th class="text-center col-1">Release Year</th>
+                        <th class="col-4">Description</th>
                     </tr>
-                <%} %>
-            </table>
+                    <!--Columns-->
+                    <% console.log(MovieList); %>
+                    <% for(let count=0;count<MovieList.length;count++) { %>
+                        <tr>
+                            <td class="text-center col-2"><%= MovieList[count].title %></td>
+                            <td class="text-center col-2"><%= MovieList[count].director %></td>
+                            <td class="text-center col-1"><%= MovieList[count].releaseYear %></td>
+                            <td class="col-4"><%= MovieList[count].description %></td>
+                        </tr>
+                    <% } %>
+                </table>
+            <% } else { %>
+                <h1>No Movies were found within the criteria</h1>
+            <% } %>
         </div>
     </div>
 </main>

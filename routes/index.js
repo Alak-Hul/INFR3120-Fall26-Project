@@ -4,13 +4,22 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-// connect my router with my model
 let Movie = require('../models/movie');
 
 /* Read Operation */
 router.get('/',async(req,res,next) => {
     try{
-        const MovieList = await Movie.find();
+        let dbQuery = {};
+
+        // 2. Check if the URL has ?searchQuery=something
+        if (req.query.searchQuery) {
+            dbQuery = { 
+                title: { $regex: req.query.searchQuery, $options: 'i' } 
+            };
+        }
+
+
+        const MovieList = await Movie.find(dbQuery);
         res.render('movies/list',{
             title:'Movies',
             MovieList:MovieList
