@@ -35,6 +35,6 @@ router.get('/',async(req,res,next) => {
 
 /* Update Operation */
 
-/* Delete Operation */=
+/* Delete Operation */
 
 module.exports = router;
