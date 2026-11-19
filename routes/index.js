@@ -11,7 +11,6 @@ router.get('/',async(req,res,next) => {
     try{
         let dbQuery = {};
 
-        // 2. Check if the URL has ?searchQuery=something
         if (req.query.searchQuery) {
             dbQuery = { 
                 title: { $regex: req.query.searchQuery, $options: 'i' } 
@@ -36,8 +35,6 @@ router.get('/',async(req,res,next) => {
 
 /* Update Operation */
 
-/* Delete Operation */
-
-module.exports = router;
+/* Delete Operation */=
 
 module.exports = router;
