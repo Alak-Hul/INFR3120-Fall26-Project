@@ -13,7 +13,10 @@ const movieSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    description: String,
+    description: {
+        type: String,
+        required: true
+    },
     addedAt: {
         type: Date,
         default: Date.now
