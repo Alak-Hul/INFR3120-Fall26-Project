@@ -32,9 +32,24 @@ router.get('/',async(req,res,next) => {
     }
 })
 /* Create Operation */
-
+router.get('/add', async(req,res,next)=>{
+    try{
+        res.render('movies/add',{
+            title:'Add movie'
+        })
+    }
+    catch(err){
+        console.error(err);
+        res.render('movies/list',{
+            error:'Error on Server'
+        })
+});
+/* Post operation */
+router.post('/add', async(req,res,next)=>{});
 /* Update Operation */
-
+router.post('/edit/:id', async(req,res,next)=>{});
+router.get('/edit/:id', async(req,res,next)=>{});
 /* Delete Operation */
+router.get('/delete/:id', async(req,res,next)=>{});
 
 module.exports = router;
