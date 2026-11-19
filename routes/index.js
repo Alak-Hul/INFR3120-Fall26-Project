@@ -32,18 +32,20 @@ router.get('/',async(req,res,next) => {
     }
 })
 /* Create Operation */
+/* Get Operation */
 router.get('/add', async(req,res,next)=>{
     try{
         res.render('movies/add',{
             title:'Add movie'
-        })
+        });
     }
     catch(err){
         console.error(err);
         res.render('movies/list',{
             error:'Error on Server'
         })
-});
+    }
+})
 /* Post operation */
 router.post('/add', async(req,res,next)=>{});
 /* Update Operation */
@@ -53,3 +55,4 @@ router.get('/edit/:id', async(req,res,next)=>{});
 router.get('/delete/:id', async(req,res,next)=>{});
 
 module.exports = router;
+'http://127.0.0.1:3200'

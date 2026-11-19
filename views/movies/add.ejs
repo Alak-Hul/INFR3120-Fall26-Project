@@ -5,9 +5,43 @@
             <h1><%= title %></h1>
             <form class="form" method="post">
                 <div class="form-group">
-                    <label for="nameTextField">Movie title</label>
-                    <input type="text" class="form-cotrol" id="nameTextField" placeholder="Enter the movie title" name="name" required>
+                    <label for="titleTextField">Title</label>
+                    <input type="text" class="form-control" 
+                    id="titleTextField" placeholder="Enter the movie title" 
+                    name="title" required>
                 </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="directorTextField">Director</label>
+                    <input type="text" class="form-control" 
+                    id="directorTextField" placeholder="Enter the director's name" 
+                    name="director" required>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="yearTextField">Release Year</label>
+                    <input type="text" class="form-control" 
+                    id="yearTextField" placeholder="Enter the release year" 
+                    name="releaseYear" required>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="descriptionTextArea">Description</label>
+                    <textarea type="text" class="form-control" 
+                    id="descriptionTextArea" placeholder="Enter the movie's description" 
+                    name="description" required></textarea>
+                </div>
+                <br>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Add movie
+                </button>
+                <a href="/books" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a>
             </form>
         </div>
     </div>
