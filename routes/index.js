@@ -61,7 +61,7 @@ router.post('/add', async(req,res,next)=>{
     }
     catch(err){
         console.error(err);
-        res.render('movies/list',{
+        res.render('movies/add',{
             error:'Error on Server'
         })
     }
