@@ -23,5 +23,5 @@ https://infr3120-fall26-project-vzxr.onrender.com/
 ## Credits
 - The recording of lectures 7, 8, 9 and notes from the course INFR3120 made by Ahmed Munieb Sheikh. 
 - Bootstrap (https://getbootstrap.com) – CSS framework
-- Font Awesome (https://fontawesome.com) – icons
+- Font Awesome (https://fontawesome.com) – Icons
 - LogoMakr (https://logomakr.com/)- Logo
